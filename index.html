@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Menu</title>
+    <style>
+        /* Animated Gradient Background */
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(-45deg, #ffffff, #add8e6);
+            background-size: 400% 400%;
+            animation: gradientBG 6s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating & Positioned Higher */
+        .main-header {
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            text-shadow: 2px 2px 10px lightblue;
+            position: absolute;
+            top: 20px;
+            animation: floating 3s infinite alternate ease-in-out;
+        }
+
+        /* Typing Animation */
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid black;
+            width: fit-content;
+            animation: typing 3s steps(25) forwards, blink 0.7s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 230px; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Button Styles */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            background: white;
+            border-radius: 50px;
+            position: relative;
+            margin: 15px 0;
+            box-shadow: 0 0 15px #00aaff;
+            overflow: hidden;
+            transition: transform 0.3s;
+            animation: floating 3s infinite alternate ease-in-out;
+        }
+
+        .button img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #00aaff;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #00aaff;
+        }
+
+        /* Floating Animation */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Updated Header -->
+    <div class="main-header">Tech With Ayat</div>
+
+    <!-- Header with Typing Animation -->
+    <div class="header">Select Your Choice</div>
+
+    <!-- Button Section -->
+    <div class="button-container">
+        <a href="https://www.twaapps.blogspot.com" class="button" target="_blank">
+            <img src="https://i.ibb.co.com/k2WvP9gP/20250326-140317.png" alt="TWA Apps">
+            TWA Apps
+        </a>
+        
+        <a href="https://twastore.blogspot.com" class="button" target="_blank">
+            <img src="https://i.imghippo.com/files/Hma4073Fs.webp" alt="E-Commerce">
+            E-Commerce
+        </a>
+
+        <a href="https://ayat-bio.tiiny.io" class="button" target="_blank">
+            <img src="https://i.ibb.co.com/vxvTdDBN/7141724.png" alt="Developer Info">
+            Developer Info
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">Terms and Policy</div>
+
+</body>
+</html>
